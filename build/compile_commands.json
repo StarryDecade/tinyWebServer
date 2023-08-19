@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/starrydecade/project/tinyWebServer/build",
+  "command": "/usr/bin/c++  -I/home/starrydecade/project/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/main.cpp.o -c /home/starrydecade/project/tinyWebServer/src/main.cpp",
+  "file": "/home/starrydecade/project/tinyWebServer/src/main.cpp"
+}
+]
