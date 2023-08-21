@@ -30,7 +30,7 @@ class Log {
 
     void write_log(int level, const char *format, ...);
 
-    void flus(void);
+    void flush(void);
 
  private:
     Log();
@@ -61,6 +61,6 @@ class Log {
 };
 
 #define LOG_DEBUG(format, ...) Log::get_instance()->write_log(0, format, ##__VA_ARGS__)
-#define LOG_INFo(format, ...) Log::get_instance()->write_log(1, format, ##__VA_ARGS__)
+#define LOG_INFO(format, ...) Log::get_instance()->write_log(1, format, ##__VA_ARGS__)
 #define LOG_WARN(format, ...) Log::get_instance()->write_log(2, format, ##__VA_ARGS__)
 #define LOG_ERROR(format, ...) Log::get_instance()->write_log(3, format, ##__VA_ARGS__)
