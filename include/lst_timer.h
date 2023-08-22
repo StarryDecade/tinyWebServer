@@ -64,7 +64,7 @@ class sort_timer_list {
             add_timer(timer, timer->next);
         }
     }
-    void del_time(util_timer *timer) {
+    void del_timer(util_timer *timer) {
         if (!timer) return;
         if ((timer == head) && (timer == tail)) {
             delete timer;
