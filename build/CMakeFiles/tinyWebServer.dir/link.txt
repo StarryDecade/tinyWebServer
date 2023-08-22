@@ -1,1 +1,0 @@
-/usr/bin/c++  -O0 -Wall -g2 -ggdb -rdynamic CMakeFiles/tinyWebServer.dir/src/main.cpp.o -o ../bin/tinyWebServer  -ljsoncpp -lmysqlclient 

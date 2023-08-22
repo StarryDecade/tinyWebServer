@@ -1,3 +1,0 @@
-/home/starrydecade/project/tinyWebServer/build/CMakeFiles/tinyWebServer.dir
-/home/starrydecade/project/tinyWebServer/build/CMakeFiles/edit_cache.dir
-/home/starrydecade/project/tinyWebServer/build/CMakeFiles/rebuild_cache.dir
