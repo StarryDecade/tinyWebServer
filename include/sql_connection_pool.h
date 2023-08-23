@@ -14,9 +14,9 @@ class connection_pool {
 
     static connection_pool *getInstance();  // 单例模式
 
-    void init(string url, int post, string user, string passwd, string dbName, int maxConn);
+    void init(string url, int port, string user, string passwd, string dbName, int maxConn);
 
-    connection_pool *getConn();
+    MYSQL *getConn();
     bool releaseConn(MYSQL *conn);  // 释放连接
     int getFreeConnCount();
     void destoryPool();
@@ -33,7 +33,7 @@ class connection_pool {
 
  private:
     string url;
-    string post;
+    string port;
     string user;
     string passwd;
     string dbName;
@@ -42,7 +42,7 @@ class connection_pool {
 // 在类的构造函数中请求资源，在类的析构函数中释放资源的技术称为资源获取即初始化
 class connectionRAII {
  public:
-    connectionRAII(MYSQL **con, connection_pool *connPool);
+    connectionRAII(MYSQL **conn, connection_pool *connPool);
     ~connectionRAII();
 
  private:
