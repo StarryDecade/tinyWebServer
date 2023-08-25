@@ -1,11 +1,13 @@
 #pragma once
 
+#include <sys/time.h>
+
 #include "locker.h"
 
 template <typename T>
 class block_queue {
  public:
-    block_queue();
+    block_queue(int max_size = 1000);
     ~block_queue();
 
     void clear();
@@ -20,7 +22,7 @@ class block_queue {
     bool pop(T &item, int ms_timeout);
 
  private:
-    locker m_lock;
+    locker m_mutex;
     cond m_cond;
 
     T *m_arry;
