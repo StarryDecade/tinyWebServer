@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdarg.h>
 #include <stdio.h>
 
 #include <string>
@@ -46,12 +47,12 @@ private:
     char log_name[128];
     int m_split_lines;
     int m_log_buf_size;
-    long long m_count; // 日志行数记录
+    long long m_count;  // 日志行数记录
     int m_today;
     FILE *m_fp;
     char *m_buf;
     block_queue<string> *m_log_queue;
-    bool m_is_async; // 异步标志
+    bool m_is_async;  // 异步标志
     locker m_mutex;
     int m_close_log;
 };
