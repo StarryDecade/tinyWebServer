@@ -71,6 +71,13 @@ void cb_func(client_data *user_data) {
     Log::get_instance()->flush();
 }
 
+//定时处理任务，重新定时以不断触发SIGALRM信号
+void timer_handler()
+{
+    timer_lst.tick();
+    alarm(TIMESLOT);
+}
+
 int main(int argc, char **argv) {
 #ifdef ASYNLOG
     Log::get_instance()->init("ServerLog", 2000, 800000, 8);  // 异步日志模型
@@ -188,7 +195,123 @@ int main(int argc, char **argv) {
                 users_timer[connfd].timer = timer;
                 timer_lst.add_timer(timer);
 #endif  // !listenfdLT
+
+#ifdef listenfdET
+                while (1) {
+                    int connfd = accept(listenfd, (struct sockaddr *)&client_address, &client_addrlength);
+                    if (connfd < 0) {
+                        LOG_ERROR("%s:errno is:%d", "accept error", error);
+                        break;
+                    }
+                    if (http_conn::m_user_count >= MAX_FD) {
+                        show_error(connfd, "Internal server busy");
+                        LOG_ERROR("%s", "Internal server busy");
+                        break;
+                    }
+                    users[connfd].init(connfd, client_address);
+
+                    // 初始化client_data数据
+                    // 创建定时器，设置回调函数和超时时间，绑定用户数据，将定时器添加到链表中
+                    users_timer[connfd].address = client_address;
+                    users_timer[connfd].sockfd = connfd;
+                    util_timer *timer = new util_timer;
+                    timer->user_data = &users_timer[connfd];
+                    timer->cb_func = cb_func;
+                    time_t cur = time(NULL);
+                    timer->expire = cur + 3 * TIMESLOT;
+                    users_timer[connfd].timer = timer;
+                    timer_lst.add_timer(timer);
+                }
+                continue;
+#endif  // !listenfdET
+            } else if (events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)) {
+                // 服务器端关闭连接，移除对应的定时器
+                util_timer *timer = users_timer[sockfd].timer;
+                timer->cb_func(&users_timer[sockfd]);
+
+                if (timer) {
+                    timer_lst.del_timer(timer);
+                }
+            } else if ((sockfd == pipefd[0]) && (events[i].events & EPOLLIN)) {
+                int sig;
+                char signals[1024];
+                ret = recv(pipefd[0], signals, sizeof(signals), 0);
+                if (ret == -1) {
+                    continue;
+                } else if (ret == 0) {
+                    continue;
+                } else {
+                    for (int i = 0; i < ret; ++i) {
+                        switch (signals[i]) {
+                            case SIGALRM: {
+                                timeout = true;
+                                break;
+                            }
+                            case SIGTERM: {
+                                stop_server = true;
+                            }
+                        }
+                    }
+                }
+            }
+            // 处理客户连接上接收到的数据
+            else if (events[i].events & EPOLLIN) {
+                util_timer *timer = users_timer[sockfd].timer;
+                if (users[sockfd].read_once()) {
+                    LOG_INFO("deal with the client(%s)", inet_ntoa(users[sockfd].get_address()->sin_addr));
+                    Log::get_instance()->flush();
+                    // 若监测到读事件，将该事件放入请求队列
+                    pool->appent(users + sockfd);
+
+                    // 若有数据传输，则将定时器往后延迟3个单位
+                    // 并对新的定时器在链表上的位置进行调整
+                    if (timer) {
+                        time_t cur = time(NULL);
+                        timer->expire = cur + 3 * TIMESLOT;
+                        LOG_INFO("%s", "adjust timer once");
+                        Log::get_instance()->flush();
+                        timer_lst.adjust_timer(timer);
+                    }
+                } else {
+                    timer->cb_func(&users_timer[sockfd]);
+                    if (timer) {
+                        timer_lst.del_timer(timer);
+                    }
+                }
+            } else if (events[i].events & EPOLLOUT) {
+                util_timer *timer = users_timer[sockfd].timer;
+                if (users[sockfd].write()) {
+                    LOG_INFO("send data to the client(%s)", inet_ntoa(users[sockfd].get_address()->sin_addr));
+                    Log::get_instance()->flush();
+
+                    // 若有数据传输，则将定时器往后延迟3个单位
+                    // 并对新的定时器在链表上的位置进行调整
+                    if (timer) {
+                        time_t cur = time(NULL);
+                        timer->expire = cur + 3 * TIMESLOT;
+                        LOG_INFO("%s", "adjust timer once");
+                        Log::get_instance()->flush();
+                        timer_lst.adjust_timer(timer);
+                    }
+                } else {
+                    timer->cb_func(&users_timer[sockfd]);
+                    if (timer) {
+                        timer_lst.del_timer(timer);
+                    }
+                }
             }
         }
+        if (timeout) {
+            timer_handler();
+            timeout = false;
+        }
     }
+    close(epollfd);
+    close(listenfd);
+    close(pipefd[1]);
+    close(pipefd[0]);
+    delete[] users;
+    delete[] users_timer;
+    delete pool;
+    return 0;
 }
