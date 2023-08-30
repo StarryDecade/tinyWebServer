@@ -5,7 +5,9 @@
 #include <fcntl.h>
 #include <mysql/mysql.h>
 #include <sys/epoll.h>
+#include <sys/mman.h>
 #include <sys/stat.h>
+#include <sys/uio.h>
 #include <unistd.h>
 
 #include <fstream>
