@@ -19,7 +19,7 @@ Log::~Log() {
 }
 
 // 异步需要设置阻塞队列的长度（max_queue_size）,同步不需要设置
-bool Log::init(const char *file_name, int close_log, int log_buf_size, int split_lines, int max_queue_size) {
+bool Log::init(const char *file_name, int log_buf_size, int split_lines, int max_queue_size) {
     if (max_queue_size >= 1) {
         m_is_async = true;
         m_log_queue = new block_queue<string>(max_queue_size);
@@ -28,7 +28,7 @@ bool Log::init(const char *file_name, int close_log, int log_buf_size, int split
         pthread_create(&tid, NULL, flush_log_thread, NULL);
     }
 
-    m_close_log = close_log;
+    m_close_log = log_buf_size;
     m_log_buf_size = log_buf_size;
     m_buf = new char[m_log_buf_size];
     memset(m_buf, '\0', m_log_buf_size);

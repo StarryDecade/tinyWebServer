@@ -54,7 +54,7 @@ threadpool<T>::~threadpool() {
 template <typename T>
 bool threadpool<T>::appent(T *request) {
     m_queueLocker.lock();
-    if (m_workerQueue.size > m_max_requests) {
+    if (m_workerQueue.size() > m_max_requests) {
         m_queueLocker.unlock();
         return false;
     }
