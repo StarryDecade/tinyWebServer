@@ -1,1 +1,1 @@
-/usr/bin/c++  -O0 -Wall -g2 -ggdb -rdynamic CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o -o ../bin/tinyWebServer  -ljsoncpp -lmysqlclient 
+/usr/bin/c++  -O0 -Wall -g2 -ggdb -rdynamic CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o CMakeFiles/tinyWebServer.dir/src/log.cpp.o CMakeFiles/tinyWebServer.dir/src/lst_timer.cpp.o CMakeFiles/tinyWebServer.dir/src/main.cpp.o CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o -o ../bin/tinyWebServer  -ljsoncpp -lmysqlclient 

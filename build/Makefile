@@ -129,6 +129,126 @@ tinyWebServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/build
 .PHONY : tinyWebServer/fast
 
+src/block_queue.o: src/block_queue.cpp.o
+.PHONY : src/block_queue.o
+
+# target to build an object file
+src/block_queue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o
+.PHONY : src/block_queue.cpp.o
+
+src/block_queue.i: src/block_queue.cpp.i
+.PHONY : src/block_queue.i
+
+# target to preprocess a source file
+src/block_queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.i
+.PHONY : src/block_queue.cpp.i
+
+src/block_queue.s: src/block_queue.cpp.s
+.PHONY : src/block_queue.s
+
+# target to generate assembly for a file
+src/block_queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.s
+.PHONY : src/block_queue.cpp.s
+
+src/http_conn.o: src/http_conn.cpp.o
+.PHONY : src/http_conn.o
+
+# target to build an object file
+src/http_conn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o
+.PHONY : src/http_conn.cpp.o
+
+src/http_conn.i: src/http_conn.cpp.i
+.PHONY : src/http_conn.i
+
+# target to preprocess a source file
+src/http_conn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.i
+.PHONY : src/http_conn.cpp.i
+
+src/http_conn.s: src/http_conn.cpp.s
+.PHONY : src/http_conn.s
+
+# target to generate assembly for a file
+src/http_conn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.s
+.PHONY : src/http_conn.cpp.s
+
+src/log.o: src/log.cpp.o
+.PHONY : src/log.o
+
+# target to build an object file
+src/log.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/log.cpp.o
+.PHONY : src/log.cpp.o
+
+src/log.i: src/log.cpp.i
+.PHONY : src/log.i
+
+# target to preprocess a source file
+src/log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/log.cpp.i
+.PHONY : src/log.cpp.i
+
+src/log.s: src/log.cpp.s
+.PHONY : src/log.s
+
+# target to generate assembly for a file
+src/log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/log.cpp.s
+.PHONY : src/log.cpp.s
+
+src/lst_timer.o: src/lst_timer.cpp.o
+.PHONY : src/lst_timer.o
+
+# target to build an object file
+src/lst_timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/lst_timer.cpp.o
+.PHONY : src/lst_timer.cpp.o
+
+src/lst_timer.i: src/lst_timer.cpp.i
+.PHONY : src/lst_timer.i
+
+# target to preprocess a source file
+src/lst_timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/lst_timer.cpp.i
+.PHONY : src/lst_timer.cpp.i
+
+src/lst_timer.s: src/lst_timer.cpp.s
+.PHONY : src/lst_timer.s
+
+# target to generate assembly for a file
+src/lst_timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/lst_timer.cpp.s
+.PHONY : src/lst_timer.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 src/sql_connection_pool.o: src/sql_connection_pool.cpp.o
 .PHONY : src/sql_connection_pool.o
 
@@ -162,6 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tinyWebServer"
+	@echo "... src/block_queue.o"
+	@echo "... src/block_queue.i"
+	@echo "... src/block_queue.s"
+	@echo "... src/http_conn.o"
+	@echo "... src/http_conn.i"
+	@echo "... src/http_conn.s"
+	@echo "... src/log.o"
+	@echo "... src/log.i"
+	@echo "... src/log.s"
+	@echo "... src/lst_timer.o"
+	@echo "... src/lst_timer.i"
+	@echo "... src/lst_timer.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... src/sql_connection_pool.o"
 	@echo "... src/sql_connection_pool.i"
 	@echo "... src/sql_connection_pool.s"
