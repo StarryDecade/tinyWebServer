@@ -58,8 +58,8 @@ class cond {
         return ret == 0;
     }
 
-    bool post() { return pthread_cond_signal(&m_cond); }
-    bool broadcast() { return pthread_cond_broadcast(&m_cond); }
+    bool signal() { return pthread_cond_signal(&m_cond) == 0; }
+    bool broadcast() { return pthread_cond_broadcast(&m_cond) == 0; }
 
  private:
     pthread_cond_t m_cond;
