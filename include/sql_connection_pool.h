@@ -44,3 +44,13 @@ public:
     string m_DatabaseName;  // 使用数据库名
     int m_close_log;        // 日志开关
 };
+
+class connectionRAII{
+public:
+	connectionRAII(MYSQL **con, connection_pool *connPool);
+	~connectionRAII();
+
+private:
+	MYSQL *connRAII;
+	connection_pool *poolRAII;
+};
