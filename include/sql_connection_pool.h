@@ -18,7 +18,7 @@ public:
     MYSQL *GetConnection();               // 获取数据库连接
     bool ReleaseConnection(MYSQL *conn);  // 释放连接
     int GetFreeConn();                    // 获取连接
-    void DestoryPool();                   // 销毁所有连接
+    void DestroyPool();                   // 销毁所有连接
 
     // 单例模式
     static connection_pool *GetInstance();
@@ -51,6 +51,6 @@ public:
 	~connectionRAII();
 
 private:
-	MYSQL *connRAII;
+	MYSQL *conRAII;
 	connection_pool *poolRAII;
 };

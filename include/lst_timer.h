@@ -68,7 +68,7 @@ public:
 	// 将内核事件表注册读事件，ET模式，选择开启EPOLLONESHOT
 	void addfd(int epollfd, int fd, bool one_shot, int TRIGMode);
 	// 信号处理函数
-	static void sig_hangdle(int sig);
+	static void sig_handler(int sig);
 	// 设置信号函数
 	void addsig(int sig, void(handler)(int), bool restart = true);
 	// 定时处理任务，重新定时以不断触发SIGALRM信号
@@ -82,3 +82,5 @@ public:
 	static int u_epollfd;
 	int m_TIMESLOT;
 };
+
+void cb_func(client_data *user_data);

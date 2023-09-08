@@ -45,7 +45,7 @@ public:
     void init(int sockfd, const sockaddr_in &addr, char *, int, int, string user, string passwd, string sqlname);
     void close_conn(bool read_close = true);
     void process();
-    void read_once();
+    bool read_once();
     bool write();
     sockaddr_in *get_address() { return &m_address; }
     void initmysql_result(connection_pool *connPool);
@@ -55,7 +55,7 @@ public:
 private:
     void init();
     HTTP_CODE process_read();
-    bool process_wait(HTTP_CODE ret);
+    bool process_write(HTTP_CODE ret);
     HTTP_CODE parse_request_line(char *text);
     HTTP_CODE parse_headers(char *text);
     HTTP_CODE parse_content(char *text);
@@ -87,14 +87,14 @@ private:
     int m_start_line;
     char m_write_buf[WRITE_BUFFER_SIZE];
     int m_write_idx;
-    CHECK_STATE m_checked_state;
+    CHECK_STATE m_check_state;
     METHOD m_method;
-    char m_read_file[FILENAME_LEN];
+    char m_real_file[FILENAME_LEN];
     char *m_url;
     char *m_version;
     char *m_host;
     long m_content_length;
-    bool m_linger;
+	bool m_linger;
     char *m_file_address;
     struct stat m_file_stat;
     struct iovec m_iv[2];
