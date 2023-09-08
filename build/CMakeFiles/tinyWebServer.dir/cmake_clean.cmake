@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "../bin/tinyWebServer"
   "../bin/tinyWebServer.pdb"
-  "CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o"
-  "CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o.d"
+  "CMakeFiles/tinyWebServer.dir/src/config.cpp.o"
+  "CMakeFiles/tinyWebServer.dir/src/config.cpp.o.d"
   "CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o"
   "CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o.d"
   "CMakeFiles/tinyWebServer.dir/src/log.cpp.o"
@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tinyWebServer.dir/src/main.cpp.o.d"
   "CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o"
   "CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o.d"
+  "CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o"
+  "CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

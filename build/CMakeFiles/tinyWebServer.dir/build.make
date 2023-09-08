@@ -69,19 +69,19 @@ include CMakeFiles/tinyWebServer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/tinyWebServer.dir/flags.make
 
-CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o: CMakeFiles/tinyWebServer.dir/flags.make
-CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o: ../src/block_queue.cpp
-CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o: CMakeFiles/tinyWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/starrydecade/project/tinyWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o -MF CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o.d -o CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o -c /home/starrydecade/project/tinyWebServer/src/block_queue.cpp
+CMakeFiles/tinyWebServer.dir/src/config.cpp.o: CMakeFiles/tinyWebServer.dir/flags.make
+CMakeFiles/tinyWebServer.dir/src/config.cpp.o: ../src/config.cpp
+CMakeFiles/tinyWebServer.dir/src/config.cpp.o: CMakeFiles/tinyWebServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/starrydecade/project/tinyWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tinyWebServer.dir/src/config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyWebServer.dir/src/config.cpp.o -MF CMakeFiles/tinyWebServer.dir/src/config.cpp.o.d -o CMakeFiles/tinyWebServer.dir/src/config.cpp.o -c /home/starrydecade/project/tinyWebServer/src/config.cpp
 
-CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/starrydecade/project/tinyWebServer/src/block_queue.cpp > CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.i
+CMakeFiles/tinyWebServer.dir/src/config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tinyWebServer.dir/src/config.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/starrydecade/project/tinyWebServer/src/config.cpp > CMakeFiles/tinyWebServer.dir/src/config.cpp.i
 
-CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/starrydecade/project/tinyWebServer/src/block_queue.cpp -o CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.s
+CMakeFiles/tinyWebServer.dir/src/config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tinyWebServer.dir/src/config.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/starrydecade/project/tinyWebServer/src/config.cpp -o CMakeFiles/tinyWebServer.dir/src/config.cpp.s
 
 CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o: CMakeFiles/tinyWebServer.dir/flags.make
 CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o: ../src/http_conn.cpp
@@ -153,27 +153,43 @@ CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/starrydecade/project/tinyWebServer/src/sql_connection_pool.cpp -o CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.s
 
+CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o: CMakeFiles/tinyWebServer.dir/flags.make
+CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o: ../src/webserver.cpp
+CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o: CMakeFiles/tinyWebServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/starrydecade/project/tinyWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o -MF CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o.d -o CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o -c /home/starrydecade/project/tinyWebServer/src/webserver.cpp
+
+CMakeFiles/tinyWebServer.dir/src/webserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tinyWebServer.dir/src/webserver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/starrydecade/project/tinyWebServer/src/webserver.cpp > CMakeFiles/tinyWebServer.dir/src/webserver.cpp.i
+
+CMakeFiles/tinyWebServer.dir/src/webserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tinyWebServer.dir/src/webserver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/starrydecade/project/tinyWebServer/src/webserver.cpp -o CMakeFiles/tinyWebServer.dir/src/webserver.cpp.s
+
 # Object files for target tinyWebServer
 tinyWebServer_OBJECTS = \
-"CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o" \
+"CMakeFiles/tinyWebServer.dir/src/config.cpp.o" \
 "CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o" \
 "CMakeFiles/tinyWebServer.dir/src/log.cpp.o" \
 "CMakeFiles/tinyWebServer.dir/src/lst_timer.cpp.o" \
 "CMakeFiles/tinyWebServer.dir/src/main.cpp.o" \
-"CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o"
+"CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o" \
+"CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o"
 
 # External object files for target tinyWebServer
 tinyWebServer_EXTERNAL_OBJECTS =
 
-../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o
+../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/src/config.cpp.o
 ../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o
 ../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/src/log.cpp.o
 ../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/src/lst_timer.cpp.o
 ../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/src/main.cpp.o
 ../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o
+../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o
 ../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/build.make
 ../bin/tinyWebServer: CMakeFiles/tinyWebServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/starrydecade/project/tinyWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/tinyWebServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/starrydecade/project/tinyWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../bin/tinyWebServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tinyWebServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

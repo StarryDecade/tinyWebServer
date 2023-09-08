@@ -129,29 +129,29 @@ tinyWebServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/build
 .PHONY : tinyWebServer/fast
 
-src/block_queue.o: src/block_queue.cpp.o
-.PHONY : src/block_queue.o
+src/config.o: src/config.cpp.o
+.PHONY : src/config.o
 
 # target to build an object file
-src/block_queue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.o
-.PHONY : src/block_queue.cpp.o
+src/config.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/config.cpp.o
+.PHONY : src/config.cpp.o
 
-src/block_queue.i: src/block_queue.cpp.i
-.PHONY : src/block_queue.i
+src/config.i: src/config.cpp.i
+.PHONY : src/config.i
 
 # target to preprocess a source file
-src/block_queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.i
-.PHONY : src/block_queue.cpp.i
+src/config.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/config.cpp.i
+.PHONY : src/config.cpp.i
 
-src/block_queue.s: src/block_queue.cpp.s
-.PHONY : src/block_queue.s
+src/config.s: src/config.cpp.s
+.PHONY : src/config.s
 
 # target to generate assembly for a file
-src/block_queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/block_queue.cpp.s
-.PHONY : src/block_queue.cpp.s
+src/config.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/config.cpp.s
+.PHONY : src/config.cpp.s
 
 src/http_conn.o: src/http_conn.cpp.o
 .PHONY : src/http_conn.o
@@ -273,6 +273,30 @@ src/sql_connection_pool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.s
 .PHONY : src/sql_connection_pool.cpp.s
 
+src/webserver.o: src/webserver.cpp.o
+.PHONY : src/webserver.o
+
+# target to build an object file
+src/webserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o
+.PHONY : src/webserver.cpp.o
+
+src/webserver.i: src/webserver.cpp.i
+.PHONY : src/webserver.i
+
+# target to preprocess a source file
+src/webserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/webserver.cpp.i
+.PHONY : src/webserver.cpp.i
+
+src/webserver.s: src/webserver.cpp.s
+.PHONY : src/webserver.s
+
+# target to generate assembly for a file
+src/webserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyWebServer.dir/build.make CMakeFiles/tinyWebServer.dir/src/webserver.cpp.s
+.PHONY : src/webserver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,9 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tinyWebServer"
-	@echo "... src/block_queue.o"
-	@echo "... src/block_queue.i"
-	@echo "... src/block_queue.s"
+	@echo "... src/config.o"
+	@echo "... src/config.i"
+	@echo "... src/config.s"
 	@echo "... src/http_conn.o"
 	@echo "... src/http_conn.i"
 	@echo "... src/http_conn.s"
@@ -300,6 +324,9 @@ help:
 	@echo "... src/sql_connection_pool.o"
 	@echo "... src/sql_connection_pool.i"
 	@echo "... src/sql_connection_pool.s"
+	@echo "... src/webserver.o"
+	@echo "... src/webserver.i"
+	@echo "... src/webserver.s"
 .PHONY : help
 
 
