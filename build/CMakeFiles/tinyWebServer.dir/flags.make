@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/starrydecade/project/tinyWebServer/include
+CXX_INCLUDES = -I/home/starrydecade/repo/tinyWebServer/include
 
 CXX_FLAGS =  -O0 -Wall -g2 -ggdb -std=gnu++20
 

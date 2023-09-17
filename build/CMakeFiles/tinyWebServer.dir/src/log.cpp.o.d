@@ -1,7 +1,7 @@
 CMakeFiles/tinyWebServer.dir/src/log.cpp.o: \
- /home/starrydecade/project/tinyWebServer/src/log.cpp \
+ /home/starrydecade/repo/tinyWebServer/src/log.cpp \
  /usr/include/stdc-predef.h \
- /home/starrydecade/project/tinyWebServer/include/log.h \
+ /home/starrydecade/repo/tinyWebServer/include/log.h \
  /usr/include/pthread.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -159,8 +159,8 @@ CMakeFiles/tinyWebServer.dir/src/log.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/starrydecade/project/tinyWebServer/include/block_queue.h \
+ /home/starrydecade/repo/tinyWebServer/include/block_queue.h \
  /usr/include/c++/11/stdlib.h /usr/include/x86_64-linux-gnu/sys/time.h \
- /home/starrydecade/project/tinyWebServer/include/locker.h \
+ /home/starrydecade/repo/tinyWebServer/include/locker.h \
  /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  /usr/include/string.h /usr/include/strings.h

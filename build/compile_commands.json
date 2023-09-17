@@ -1,37 +1,37 @@
 [
 {
-  "directory": "/home/starrydecade/project/tinyWebServer/build",
-  "command": "/usr/bin/c++  -I/home/starrydecade/project/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/config.cpp.o -c /home/starrydecade/project/tinyWebServer/src/config.cpp",
-  "file": "/home/starrydecade/project/tinyWebServer/src/config.cpp"
+  "directory": "/home/starrydecade/repo/tinyWebServer/build",
+  "command": "/usr/bin/c++  -I/home/starrydecade/repo/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/config.cpp.o -c /home/starrydecade/repo/tinyWebServer/src/config.cpp",
+  "file": "/home/starrydecade/repo/tinyWebServer/src/config.cpp"
 },
 {
-  "directory": "/home/starrydecade/project/tinyWebServer/build",
-  "command": "/usr/bin/c++  -I/home/starrydecade/project/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o -c /home/starrydecade/project/tinyWebServer/src/http_conn.cpp",
-  "file": "/home/starrydecade/project/tinyWebServer/src/http_conn.cpp"
+  "directory": "/home/starrydecade/repo/tinyWebServer/build",
+  "command": "/usr/bin/c++  -I/home/starrydecade/repo/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o -c /home/starrydecade/repo/tinyWebServer/src/http_conn.cpp",
+  "file": "/home/starrydecade/repo/tinyWebServer/src/http_conn.cpp"
 },
 {
-  "directory": "/home/starrydecade/project/tinyWebServer/build",
-  "command": "/usr/bin/c++  -I/home/starrydecade/project/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/log.cpp.o -c /home/starrydecade/project/tinyWebServer/src/log.cpp",
-  "file": "/home/starrydecade/project/tinyWebServer/src/log.cpp"
+  "directory": "/home/starrydecade/repo/tinyWebServer/build",
+  "command": "/usr/bin/c++  -I/home/starrydecade/repo/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/log.cpp.o -c /home/starrydecade/repo/tinyWebServer/src/log.cpp",
+  "file": "/home/starrydecade/repo/tinyWebServer/src/log.cpp"
 },
 {
-  "directory": "/home/starrydecade/project/tinyWebServer/build",
-  "command": "/usr/bin/c++  -I/home/starrydecade/project/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/lst_timer.cpp.o -c /home/starrydecade/project/tinyWebServer/src/lst_timer.cpp",
-  "file": "/home/starrydecade/project/tinyWebServer/src/lst_timer.cpp"
+  "directory": "/home/starrydecade/repo/tinyWebServer/build",
+  "command": "/usr/bin/c++  -I/home/starrydecade/repo/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/lst_timer.cpp.o -c /home/starrydecade/repo/tinyWebServer/src/lst_timer.cpp",
+  "file": "/home/starrydecade/repo/tinyWebServer/src/lst_timer.cpp"
 },
 {
-  "directory": "/home/starrydecade/project/tinyWebServer/build",
-  "command": "/usr/bin/c++  -I/home/starrydecade/project/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/main.cpp.o -c /home/starrydecade/project/tinyWebServer/src/main.cpp",
-  "file": "/home/starrydecade/project/tinyWebServer/src/main.cpp"
+  "directory": "/home/starrydecade/repo/tinyWebServer/build",
+  "command": "/usr/bin/c++  -I/home/starrydecade/repo/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/main.cpp.o -c /home/starrydecade/repo/tinyWebServer/src/main.cpp",
+  "file": "/home/starrydecade/repo/tinyWebServer/src/main.cpp"
 },
 {
-  "directory": "/home/starrydecade/project/tinyWebServer/build",
-  "command": "/usr/bin/c++  -I/home/starrydecade/project/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o -c /home/starrydecade/project/tinyWebServer/src/sql_connection_pool.cpp",
-  "file": "/home/starrydecade/project/tinyWebServer/src/sql_connection_pool.cpp"
+  "directory": "/home/starrydecade/repo/tinyWebServer/build",
+  "command": "/usr/bin/c++  -I/home/starrydecade/repo/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/sql_connection_pool.cpp.o -c /home/starrydecade/repo/tinyWebServer/src/sql_connection_pool.cpp",
+  "file": "/home/starrydecade/repo/tinyWebServer/src/sql_connection_pool.cpp"
 },
 {
-  "directory": "/home/starrydecade/project/tinyWebServer/build",
-  "command": "/usr/bin/c++  -I/home/starrydecade/project/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o -c /home/starrydecade/project/tinyWebServer/src/webserver.cpp",
-  "file": "/home/starrydecade/project/tinyWebServer/src/webserver.cpp"
+  "directory": "/home/starrydecade/repo/tinyWebServer/build",
+  "command": "/usr/bin/c++  -I/home/starrydecade/repo/tinyWebServer/include  -O0 -Wall -g2 -ggdb -std=gnu++20 -o CMakeFiles/tinyWebServer.dir/src/webserver.cpp.o -c /home/starrydecade/repo/tinyWebServer/src/webserver.cpp",
+  "file": "/home/starrydecade/repo/tinyWebServer/src/webserver.cpp"
 }
 ]
