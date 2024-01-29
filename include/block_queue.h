@@ -52,7 +52,7 @@ public:
             m_mutex.unlock();
             return true;
         }
-        m_mutex.lock();
+        m_mutex.unlock();
         return false;
     }
 
