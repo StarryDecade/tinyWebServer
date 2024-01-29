@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/tinyWebServer"
-  "../bin/tinyWebServer.pdb"
+  "/home/starry/Documents/repo/tinyWebServer/bin/tinyWebServer"
+  "/home/starry/Documents/repo/tinyWebServer/bin/tinyWebServer.pdb"
   "CMakeFiles/tinyWebServer.dir/src/config.cpp.o"
   "CMakeFiles/tinyWebServer.dir/src/config.cpp.o.d"
   "CMakeFiles/tinyWebServer.dir/src/http_conn.cpp.o"
